@@ -1,0 +1,21 @@
+O algoritmo de Gauss é usado para calcular todos os geradores de U(p) sendo p
+primo.
+
+Como o algoritmo de Gauss funciona:
+
+> Entrada de um numero p primo
+> Calcula todos os fatores de p-1
+> Adiciona os fatores a uma listaf
+> Adiciona os expoentes a outra listae
+> Inicializa o a com valor 2
+> Passa por todos os fatores da listaf checando se a^((p-1)/fator) (mod p) é 
+igual a 1
+  > Se sim, faz a = a + 1
+  > Se nao, achou o valor de h e g
+    > valor de h é dado por a^((p-1)/fator*expoentedofator) (mod p)
+    > valor de g é dado por g*h (mod p)
+> Passa por todos os valores de i = 1 ate i = p-1 checando se o mdc entre i e
+p-1 é 1
+  > Se sim, adiciona a parte inteira de g^i (mod p) a uma listag
+  > Faz i = i + 1 (independente do if anterior)
+> Printa a listag em ordem crescente
